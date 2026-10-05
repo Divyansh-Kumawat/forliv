@@ -1,26 +1,80 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+  forlivf design tokens.
+  Derived from the wordmark: near-black "for" + violet "livf" on a warm paper canvas.
+*/
+@theme {
+  /* Canvas & surfaces */
+  --color-canvas: #efedea;
+  --color-canvas-deep: #e6e3df;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f8f7f5;
+  --color-line: #e3e0da;
+  --color-line-strong: #d3cfc7;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  /* Ink */
+  --color-ink: #16151c;
+  --color-ink-soft: #56535f;
+  --color-ink-muted: #8b8792;
+
+  /* Brand violet — the "livf" half of the wordmark */
+  --color-brand-50: #f6f2ff;
+  --color-brand-100: #ece3ff;
+  --color-brand-200: #dbcaff;
+  --color-brand-300: #c1a4fb;
+  --color-brand-400: #a175f4;
+  --color-brand-500: #8449ea;
+  --color-brand-600: #6d28d9;
+  --color-brand-700: #5b21b6;
+  --color-brand-800: #4c1d95;
+
+  /* Status — reserved, never reused as a data series */
+  --color-good: #15803d;
+  --color-warning: #b45309;
+  --color-critical: #b91c1c;
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  /* The brand is a light, warm system — opt out of the browser's dark flip. */
+  color-scheme: light;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Keyboard focus: one consistent brand ring everywhere. */
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--color-brand-600);
+    outline-offset: 2px;
+  }
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+/* "Download PDF" prints the report; the app chrome is marked print:hidden. */
+@media print {
+  body {
+    background: #ffffff;
+  }
+
+  main {
+    padding: 0 !important;
+  }
+
+  /* Keep a report card from being split across two pages. */
+  section,
+  table {
+    break-inside: avoid;
+  }
 }

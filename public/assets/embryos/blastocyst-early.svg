@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Illustration of an early blastocyst">
+  <defs>
+    <radialGradient id="bgC" cx="50%" cy="45%" r="72%">
+      <stop offset="0%" stop-color="#393934"/>
+      <stop offset="100%" stop-color="#1a1a18"/>
+    </radialGradient>
+    <radialGradient id="massC" cx="42%" cy="36%" r="70%">
+      <stop offset="0%" stop-color="#cfc8b6"/>
+      <stop offset="70%" stop-color="#ada593"/>
+      <stop offset="100%" stop-color="#928a78"/>
+    </radialGradient>
+    <radialGradient id="cavC" cx="45%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#e2dccb"/>
+      <stop offset="100%" stop-color="#c4bda9"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="400" height="400" fill="url(#bgC)"/>
+
+  <circle cx="200" cy="200" r="134" fill="none" stroke="#c6bfae" stroke-width="22" opacity="0.85"/>
+  <circle cx="200" cy="200" r="134" fill="none" stroke="#ece6d8" stroke-width="3" opacity="0.45"/>
+
+  <circle cx="200" cy="200" r="115" fill="url(#massC)"/>
+
+  <!-- Small forming cavity -->
+  <ellipse cx="168" cy="176" rx="52" ry="44" fill="url(#cavC)" opacity="0.95"/>
+
+  <!-- Compacted cells -->
+  <circle cx="238" cy="176" r="34" fill="#b8b09e" stroke="#8a8271" stroke-width="1.8" opacity="0.9"/>
+  <circle cx="226" cy="240" r="36" fill="#b2aa98" stroke="#847c6c" stroke-width="1.8" opacity="0.9"/>
+  <circle cx="166" cy="248" r="32" fill="#bbb3a1" stroke="#8d8574" stroke-width="1.8" opacity="0.9"/>
+  <circle cx="253" cy="215" r="24" fill="#c0b8a6" stroke="#8f8776" stroke-width="1.6" opacity="0.85"/>
+</svg>

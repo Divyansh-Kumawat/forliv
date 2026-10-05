@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Illustration of an expanded blastocyst">
+  <defs>
+    <radialGradient id="bgA" cx="50%" cy="45%" r="72%">
+      <stop offset="0%" stop-color="#3d3c37"/>
+      <stop offset="100%" stop-color="#1c1c1a"/>
+    </radialGradient>
+    <radialGradient id="cavityA" cx="42%" cy="36%" r="68%">
+      <stop offset="0%" stop-color="#ded8c7"/>
+      <stop offset="65%" stop-color="#c2bba7"/>
+      <stop offset="100%" stop-color="#a49c88"/>
+    </radialGradient>
+    <radialGradient id="icmA" cx="38%" cy="32%" r="72%">
+      <stop offset="0%" stop-color="#a8aeb4"/>
+      <stop offset="100%" stop-color="#5b6066"/>
+    </radialGradient>
+    <ellipse id="teA" cx="200" cy="64" rx="27" ry="18" fill="#d2cbba" stroke="#8b8577" stroke-width="1.6" opacity="0.96"/>
+  </defs>
+
+  <rect width="400" height="400" fill="url(#bgA)"/>
+
+  <!-- Zona pellucida -->
+  <circle cx="200" cy="200" r="150" fill="none" stroke="#cdc6b5" stroke-width="15" opacity="0.85"/>
+  <circle cx="200" cy="200" r="150" fill="none" stroke="#f2ede0" stroke-width="3" opacity="0.5"/>
+
+  <!-- Blastocoel cavity -->
+  <circle cx="200" cy="200" r="136" fill="url(#cavityA)"/>
+
+  <!-- Trophectoderm ring -->
+  <g>
+    <use href="#teA" transform="rotate(0 200 200)"/>
+    <use href="#teA" transform="rotate(26 200 200)"/>
+    <use href="#teA" transform="rotate(52 200 200)"/>
+    <use href="#teA" transform="rotate(78 200 200)"/>
+    <use href="#teA" transform="rotate(104 200 200)"/>
+    <use href="#teA" transform="rotate(130 200 200)"/>
+    <use href="#teA" transform="rotate(156 200 200)"/>
+    <use href="#teA" transform="rotate(182 200 200)"/>
+    <use href="#teA" transform="rotate(208 200 200)"/>
+    <use href="#teA" transform="rotate(234 200 200)"/>
+    <use href="#teA" transform="rotate(260 200 200)"/>
+    <use href="#teA" transform="rotate(286 200 200)"/>
+    <use href="#teA" transform="rotate(312 200 200)"/>
+    <use href="#teA" transform="rotate(338 200 200)"/>
+  </g>
+
+  <!-- Inner cell mass -->
+  <path d="M186 236c-24-6-38-24-34-45 4-22 26-36 50-32 25 4 41 24 37 46-4 21-28 37-53 31z" fill="url(#icmA)" stroke="#4b5055" stroke-width="2"/>
+  <circle cx="192" cy="204" r="11" fill="#8f959b" opacity="0.6"/>
+  <circle cx="214" cy="221" r="9" fill="#7d848a" opacity="0.55"/>
+</svg>
